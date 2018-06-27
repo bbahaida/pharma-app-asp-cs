@@ -1,0 +1,29 @@
+2017-03-06 07:40:08,667 [INFO] [PharmaDomain.Service.StockServiceImpl] - [AddStock] - [26]: admin a ajouter le Stock 1
+2017-03-06 07:40:51,556 [ERROR] [PharmaDomain.Dao.FamilleDaoImpl] - [GetOneFamilleByDesignation] - [78]: La séquence ne contient aucun élément.
+2017-03-06 07:40:51,643 [INFO] [PharmaDomain.Service.FamilleServiceImpl] - [AddFamille] - [32]: admin a ajouter la famille Anti-Mba6as
+2017-03-06 08:21:57,502 [ERROR] [PharmaDomain.Dao.MedicamentDaoImpl] - [GetMedicamentByLibelle] - [84]: La séquence ne contient aucun élément.
+2017-03-06 08:21:57,720 [INFO] [PharmaDomain.Service.MedicamentServiceImpl] - [AddMedicament] - [34]: admin a ajouter le medicament {Test,200,1}
+2017-03-06 08:21:57,980 [INFO] [PharmaDomain.Service.StockMediServiceImpl] - [AddStockMedi] - [34]: admin a ajouter le medicament Test dans le stock 1
+2017-03-06 08:32:06,944 [ERROR] [PharmaDomain.Dao.MedicamentDaoImpl] - [GetMedicamentByLibelle] - [84]: La séquence ne contient aucun élément.
+2017-03-06 08:32:07,065 [INFO] [PharmaDomain.Service.MedicamentServiceImpl] - [AddMedicament] - [34]: admin a ajouter le medicament {Test,300,1}
+2017-03-06 08:32:07,325 [INFO] [PharmaDomain.Service.StockMediServiceImpl] - [AddStockMedi] - [37]: admin a ajouter le medicament Test dans le stock 1
+2017-03-06 08:36:18,667 [ERROR] [PharmaDomain.Dao.MedicamentDaoImpl] - [GetMedicamentByLibelle] - [84]: La séquence ne contient aucun élément.
+2017-03-06 08:36:18,793 [INFO] [PharmaDomain.Service.MedicamentServiceImpl] - [AddMedicament] - [34]: admin a ajouter le medicament {ha4e dwe,200,1}
+2017-03-06 08:36:18,985 [INFO] [PharmaDomain.Service.StockMediServiceImpl] - [AddStockMedi] - [37]: admin a ajouter le medicament ha4e dwe dans le stock 1
+2017-03-06 08:39:11,003 [INFO] [PharmaDomain.Service.StockServiceImpl] - [AddStock] - [26]: admin a ajouter le Stock 2
+2017-03-06 08:39:29,266 [ERROR] [PharmaDomain.Dao.FamilleDaoImpl] - [GetOneFamilleByDesignation] - [78]: La séquence ne contient aucun élément.
+2017-03-06 08:39:29,333 [INFO] [PharmaDomain.Service.FamilleServiceImpl] - [AddFamille] - [32]: admin a ajouter la famille le5le
+2017-03-06 08:39:56,099 [ERROR] [PharmaDomain.Dao.MedicamentDaoImpl] - [GetMedicamentByLibelle] - [84]: La séquence ne contient aucun élément.
+2017-03-06 08:39:56,138 [INFO] [PharmaDomain.Service.MedicamentServiceImpl] - [AddMedicament] - [34]: admin a ajouter le medicament {Medi,1000,2}
+2017-03-06 08:39:56,349 [INFO] [PharmaDomain.Service.StockMediServiceImpl] - [AddStockMedi] - [37]: admin a ajouter le medicament Medi dans le stock 2
+2017-03-06 20:59:13,029 [ERROR] [PharmaDomain.Dao.FamilleDaoImpl] - [GetOneFamilleByDesignation] - [78]: La séquence ne contient aucun élément.
+2017-03-06 20:59:13,359 [INFO] [PharmaDomain.Service.FamilleServiceImpl] - [AddFamille] - [32]: admin a ajouter la famille Anti-le36as
+2017-03-06 20:59:24,447 [INFO] [PharmaDomain.Service.StockServiceImpl] - [AddStock] - [26]: admin a ajouter le Stock 3
+2017-03-06 21:05:13,181 [ERROR] [PharmaDomain.Dao.MedicamentDaoImpl] - [GetMedicamentByLibelle] - [84]: La séquence ne contient aucun élément.
+2017-03-06 21:05:13,358 [INFO] [PharmaDomain.Service.MedicamentServiceImpl] - [AddMedicament] - [34]: admin a ajouter le medicament {Nazle,400,3}
+2017-03-06 21:05:13,699 [INFO] [PharmaDomain.Service.StockMediServiceImpl] - [AddStockMedi] - [37]: admin a ajouter le medicament Nazle dans le stock 3
+2017-03-06 21:17:05,528 [ERROR] [PharmaDomain.Dao.FamilleDaoImpl] - [GetOneFamilleByDesignation] - [78]: La séquence ne contient aucun élément.
+2017-03-06 21:17:05,632 [INFO] [PharmaDomain.Service.FamilleServiceImpl] - [AddFamille] - [32]: admin a ajouter la famille Anti-flamatoir
+2017-03-06 21:29:54,142 [ERROR] [PharmaDomain.Dao.MedicamentDaoImpl] - [GetMedicamentByLibelle] - [84]: La séquence ne contient aucun élément.
+2017-03-06 21:29:54,253 [INFO] [PharmaDomain.Service.MedicamentServiceImpl] - [AddMedicament] - [34]: admin a ajouter le medicament {Dolipran,300,4}
+2017-03-06 21:29:54,561 [INFO] [PharmaDomain.Service.StockMediServiceImpl] - [AddStockMedi] - [37]: admin a ajouter le medicament Dolipran dans le stock 1

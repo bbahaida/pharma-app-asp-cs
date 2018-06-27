@@ -1,0 +1,12 @@
+2017-03-22 14:41:11,763 [INFO] [PharmaDomain.Service.FamilleServiceImpl] - [AddFamille] - [32]: admin a ajouter la famille Antipaludiques
+2017-03-22 15:04:47,834 [INFO] [PharmaDomain.Service.FamilleServiceImpl] - [AddFamille] - [32]: admin a ajouter la famille ANTIPROTOZOAIRES
+2017-03-22 15:15:48,551 [INFO] [PharmaDomain.Service.FamilleServiceImpl] - [AddFamille] - [32]: admin a ajouter la famille ANTISEPTIQUES
+2017-03-22 15:16:11,481 [INFO] [PharmaDomain.Service.StockServiceImpl] - [AddStock] - [26]: admin a ajouter le Stock 5
+2017-03-22 15:16:47,696 [INFO] [PharmaDomain.Service.VenteServiceImpl] - [AddVente] - [26]: admin a ajouter le Stock {20,96300,0000}
+2017-03-22 15:16:48,380 [INFO] [PharmaDomain.Service.VenteMediServiceImpl] - [AddVenteMedi] - [42]: admin a ajouter le medicament Halothane 20% fl 250ml unité dans le stock 20
+2017-03-22 15:44:51,421 [INFO] [PharmaDomain.Service.VenteServiceImpl] - [AddVente] - [26]: admin a ajouter le Stock {21,10700,0000}
+2017-03-22 15:44:52,076 [INFO] [PharmaDomain.Service.VenteMediServiceImpl] - [AddVenteMedi] - [42]: admin a ajouter le medicament Halothane 20% fl 250ml unité dans le stock 21
+2017-03-22 16:10:09,871 [INFO] [PharmaDomain.Service.VenteServiceImpl] - [AddVente] - [26]: admin a ajouter le Stock {22,10700,0000}
+2017-03-22 16:10:10,635 [INFO] [PharmaDomain.Service.VenteMediServiceImpl] - [AddVenteMedi] - [42]: admin a ajouter le medicament Halothane 20% fl 250ml unité dans le stock 22
+2017-03-22 16:13:57,274 [INFO] [PharmaDomain.Service.VenteServiceImpl] - [AddVente] - [26]: admin a ajouter le Stock {23,21400,0000}
+2017-03-22 16:13:58,012 [INFO] [PharmaDomain.Service.VenteMediServiceImpl] - [AddVenteMedi] - [42]: admin a ajouter le medicament Halothane 20% fl 250ml unité dans le stock 23

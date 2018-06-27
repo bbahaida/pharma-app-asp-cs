@@ -1,0 +1,7 @@
+2017-03-15 12:04:52,205 [INFO] [PharmaDomain.Service.FamilleServiceImpl] - [EditFamille] - [70]: admin a Modifier la famille Antibiotique a Antibiotique
+2017-03-15 17:05:32,392 [INFO] [PharmaDomain.Service.MedicamentServiceImpl] - [AddMedicament] - [34]: admin a ajouter le medicament {Aspirine 100mg B/1000 cp,800,5}
+2017-03-15 17:05:33,434 [INFO] [PharmaDomain.Service.StockMediServiceImpl] - [AddStockMedi] - [37]: admin a ajouter le medicament Aspirine 100mg B/1000 cp dans le stock 3
+2017-03-15 17:13:14,372 [INFO] [PharmaDomain.Service.VenteServiceImpl] - [AddVente] - [26]: admin a ajouter le Stock {14,9600,0000}
+2017-03-15 17:13:15,084 [INFO] [PharmaDomain.Service.VenteMediServiceImpl] - [AddVenteMedi] - [42]: admin a ajouter le medicament Aspirine 100mg B/1000 cp dans le stock 14
+2017-03-15 19:10:00,639 [INFO] [PharmaDomain.Service.UserServiceImpl] - [AddUser] - [27]: admin a ajouter l'utilisateur nehah
+2017-03-15 19:45:28,896 [INFO] [PharmaDomain.Service.StockServiceImpl] - [AddStock] - [26]: admin a ajouter le Stock 4

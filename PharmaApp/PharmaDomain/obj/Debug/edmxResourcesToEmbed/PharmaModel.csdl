@@ -1,0 +1,160 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="PharmaModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Famille">
+    <Key>
+      <PropertyRef Name="CodeFamille" />
+    </Key>
+    <Property Name="CodeFamille" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Designation" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="Medicaments" Relationship="Self.FK_Medicaments_CodeFamille" FromRole="Familles" ToRole="Medicaments" />
+  </EntityType>
+  <EntityType Name="Medicament">
+    <Key>
+      <PropertyRef Name="CodeMedicament" />
+    </Key>
+    <Property Name="CodeMedicament" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="LibelleMedicament" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Prix" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
+    <Property Name="CodeFamille" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Famille" Relationship="Self.FK_Medicaments_CodeFamille" FromRole="Medicaments" ToRole="Familles" />
+    <NavigationProperty Name="StockMedis" Relationship="Self.FK_StockMedi_CodeMedicament" FromRole="Medicaments" ToRole="StockMedi" />
+    <NavigationProperty Name="VenteMedis" Relationship="Self.FK_VenteMedi_CodeMedicament" FromRole="Medicaments" ToRole="VenteMedi" />
+  </EntityType>
+  <EntityType Name="Stock">
+    <Key>
+      <PropertyRef Name="NumStock" />
+    </Key>
+    <Property Name="NumStock" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="QuantiteMedicament" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="StockMedis" Relationship="Self.FK_StockMedi_NumStock" FromRole="Stock" ToRole="StockMedi" />
+  </EntityType>
+  <EntityType Name="StockMedi">
+    <Key>
+      <PropertyRef Name="NumStock" />
+      <PropertyRef Name="CodeMedicament" />
+    </Key>
+    <Property Name="QuantiteMedicament" Type="Int32" Nullable="false" />
+    <Property Name="NumStock" Type="Int32" Nullable="false" />
+    <Property Name="CodeMedicament" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Medicament" Relationship="Self.FK_StockMedi_CodeMedicament" FromRole="StockMedi" ToRole="Medicaments" />
+    <NavigationProperty Name="Stock" Relationship="Self.FK_StockMedi_NumStock" FromRole="StockMedi" ToRole="Stock" />
+  </EntityType>
+  <EntityType Name="Vente">
+    <Key>
+      <PropertyRef Name="NumVente" />
+    </Key>
+    <Property Name="NumVente" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="DateVente" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="MontantVente" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
+    <NavigationProperty Name="VenteMedis" Relationship="Self.FK_VenteMedi_NumVente" FromRole="Vente" ToRole="VenteMedi" />
+  </EntityType>
+  <EntityType Name="VenteMedi">
+    <Key>
+      <PropertyRef Name="NumVente" />
+      <PropertyRef Name="CodeMedicament" />
+    </Key>
+    <Property Name="QuantiteMedicament" Type="Int32" Nullable="false" />
+    <Property Name="NumVente" Type="Int32" Nullable="false" />
+    <Property Name="CodeMedicament" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Medicament" Relationship="Self.FK_VenteMedi_CodeMedicament" FromRole="VenteMedi" ToRole="Medicaments" />
+    <NavigationProperty Name="Vente" Relationship="Self.FK_VenteMedi_NumVente" FromRole="VenteMedi" ToRole="Vente" />
+  </EntityType>
+  <Association Name="FK_Medicaments_CodeFamille">
+    <End Role="Familles" Type="Self.Famille" Multiplicity="1" />
+    <End Role="Medicaments" Type="Self.Medicament" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Familles">
+        <PropertyRef Name="CodeFamille" />
+      </Principal>
+      <Dependent Role="Medicaments">
+        <PropertyRef Name="CodeFamille" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_StockMedi_CodeMedicament">
+    <End Role="Medicaments" Type="Self.Medicament" Multiplicity="1" />
+    <End Role="StockMedi" Type="Self.StockMedi" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Medicaments">
+        <PropertyRef Name="CodeMedicament" />
+      </Principal>
+      <Dependent Role="StockMedi">
+        <PropertyRef Name="CodeMedicament" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_VenteMedi_CodeMedicament">
+    <End Role="Medicaments" Type="Self.Medicament" Multiplicity="1" />
+    <End Role="VenteMedi" Type="Self.VenteMedi" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Medicaments">
+        <PropertyRef Name="CodeMedicament" />
+      </Principal>
+      <Dependent Role="VenteMedi">
+        <PropertyRef Name="CodeMedicament" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_StockMedi_NumStock">
+    <End Role="Stock" Type="Self.Stock" Multiplicity="1" />
+    <End Role="StockMedi" Type="Self.StockMedi" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Stock">
+        <PropertyRef Name="NumStock" />
+      </Principal>
+      <Dependent Role="StockMedi">
+        <PropertyRef Name="NumStock" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_VenteMedi_NumVente">
+    <End Role="Vente" Type="Self.Vente" Multiplicity="1" />
+    <End Role="VenteMedi" Type="Self.VenteMedi" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Vente">
+        <PropertyRef Name="NumVente" />
+      </Principal>
+      <Dependent Role="VenteMedi">
+        <PropertyRef Name="NumVente" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="PharmaEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Familles" EntityType="Self.Famille" />
+    <EntitySet Name="Medicaments" EntityType="Self.Medicament" />
+    <EntitySet Name="Stocks" EntityType="Self.Stock" />
+    <EntitySet Name="StockMedis" EntityType="Self.StockMedi" />
+    <EntitySet Name="Ventes" EntityType="Self.Vente" />
+    <EntitySet Name="VenteMedis" EntityType="Self.VenteMedi" />
+    <AssociationSet Name="FK_Medicaments_CodeFamille" Association="Self.FK_Medicaments_CodeFamille">
+      <End Role="Familles" EntitySet="Familles" />
+      <End Role="Medicaments" EntitySet="Medicaments" />
+    </AssociationSet>
+    <AssociationSet Name="FK_StockMedi_CodeMedicament" Association="Self.FK_StockMedi_CodeMedicament">
+      <End Role="Medicaments" EntitySet="Medicaments" />
+      <End Role="StockMedi" EntitySet="StockMedis" />
+    </AssociationSet>
+    <AssociationSet Name="FK_VenteMedi_CodeMedicament" Association="Self.FK_VenteMedi_CodeMedicament">
+      <End Role="Medicaments" EntitySet="Medicaments" />
+      <End Role="VenteMedi" EntitySet="VenteMedis" />
+    </AssociationSet>
+    <AssociationSet Name="FK_StockMedi_NumStock" Association="Self.FK_StockMedi_NumStock">
+      <End Role="Stock" EntitySet="Stocks" />
+      <End Role="StockMedi" EntitySet="StockMedis" />
+    </AssociationSet>
+    <AssociationSet Name="FK_VenteMedi_NumVente" Association="Self.FK_VenteMedi_NumVente">
+      <End Role="Vente" EntitySet="Ventes" />
+      <End Role="VenteMedi" EntitySet="VenteMedis" />
+    </AssociationSet>
+    <EntitySet Name="Users" EntityType="PharmaModel.User" />
+  </EntityContainer>
+  <EntityType Name="User">
+    <Key>
+      <PropertyRef Name="UserId" />
+    </Key>
+    <Property Name="UserId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Login" Type="String" Nullable="false" MaxLength="50" />
+    <Property Name="Password" Type="String" Nullable="false" />
+    <Property Name="Name" Type="String" Nullable="false" />
+  </EntityType>
+</Schema>

@@ -1,0 +1,10 @@
+2017-03-10 17:41:55,736 [ERROR] [PharmaDomain.Dao.FamilleDaoImpl] - [GetOneFamilleByDesignation] - [78]: La séquence ne contient aucun élément.
+2017-03-10 17:41:56,454 [INFO] [PharmaDomain.Service.FamilleServiceImpl] - [AddFamille] - [32]: admin a ajouter la famille Antiacides
+2017-03-10 17:52:31,085 [ERROR] [PharmaDomain.Dao.FamilleDaoImpl] - [GetOneFamilleByDesignation] - [78]: La séquence ne contient aucun élément.
+2017-03-10 17:52:31,216 [INFO] [PharmaDomain.Service.FamilleServiceImpl] - [AddFamille] - [32]: admin a ajouter la famille Antagonistes du calcium
+2017-03-10 17:53:03,186 [ERROR] [PharmaDomain.Dao.FamilleDaoImpl] - [GetOneFamilleByDesignation] - [78]: La séquence ne contient aucun élément.
+2017-03-10 17:53:03,442 [INFO] [PharmaDomain.Service.FamilleServiceImpl] - [AddFamille] - [32]: admin a ajouter la famille  Antiagrégants plaquettaires
+2017-03-10 17:53:29,205 [ERROR] [PharmaDomain.Dao.FamilleDaoImpl] - [GetOneFamilleByDesignation] - [78]: La séquence ne contient aucun élément.
+2017-03-10 17:53:29,333 [INFO] [PharmaDomain.Service.FamilleServiceImpl] - [AddFamille] - [32]: admin a ajouter la famille  Antiarythmiques
+2017-03-10 17:54:03,615 [ERROR] [PharmaDomain.Dao.FamilleDaoImpl] - [GetOneFamilleByDesignation] - [78]: La séquence ne contient aucun élément.
+2017-03-10 17:54:03,758 [INFO] [PharmaDomain.Service.FamilleServiceImpl] - [AddFamille] - [32]: admin a ajouter la famille Antibiotiques

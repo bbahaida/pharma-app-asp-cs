@@ -1,0 +1,77 @@
+﻿
+@{
+    ViewBag.Title = "Medicament Ajouter";
+    if (ViewBag.error)
+    {
+        <script type="text/javascript">
+            var m = "@ViewBag.message";
+            alert("Erreur l'operation a echoue "+m);
+        </script>
+    }
+}
+<div class="container">
+    <div class="row">
+        <div class="col-md-offset-3 col-md-6">
+            @using (Html.BeginForm())
+            {
+                <div class="form-group row">
+                    <label for="login" class="col-sm-5" style="padding-top:10px">Code</label>
+                    <div class="col-sm-7">
+                        @{
+                            int code = InstanceResolver.Instance.Medicament.GetAll().Count() == 0 ? 1 : InstanceResolver.Instance.Medicament.GetAll().Last().CodeMedicament+1;
+                        }
+                        <input type="text" class="form-control" disabled id="code" name="code" value="@code">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="libelle" class="col-sm-5" style="padding-top:10px">Libelle</label>
+                    <div class="col-sm-7">
+                        <input type="text" class="form-control" id="libelle" name="libelle" placeholder="libelle">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="prix" class="col-sm-5" style="padding-top:10px">Prix</label>
+                    <div class="col-sm-7">
+                        <input type="text" class="form-control" id="prix" name="prix" placeholder="prix">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="famille" class="col-sm-5" style="padding-top:10px">Famille</label>
+                    <div class="col-sm-7">
+                        <select class="form-control" id="famille" name="famille">
+                            <option value="0">Liste des familles</option>
+                            @foreach (var f in ViewBag.famille )
+                            {
+                                <option value="@f.CodeFamille">@f.Designation</option>
+                            }
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="quantite" class="col-sm-5" style="padding-top:10px">Quantité</label>
+                    <div class="col-sm-7">
+                        <input type="text" class="form-control" id="quantite" name="quantite" placeholder="quantite">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="stock" class="col-sm-5" style="padding-top:10px">Stock</label>
+                    <div class="col-sm-7">
+                        <select class="form-control" id="stock" name="stock">
+                            <option value="0">Liste des stocks</option>
+                            @foreach (var s in ViewBag.stock)
+                            {
+                                <option value="@s.NumStock">@s.NumStock</option>
+                            }
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <div class="col-sm-offset-5 col-sm-7">
+                        <button type="submit" class="btn btn-success">Ajouter</button>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+
+</div>

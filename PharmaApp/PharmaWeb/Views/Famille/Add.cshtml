@@ -1,0 +1,42 @@
+﻿
+@{
+    ViewBag.Title = "Famille Ajouter";
+    if (ViewBag.error)
+    {
+        <script type="text/javascript">
+            alert("Erreur l'operation a echoue");
+        </script>
+    }
+}
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-offset-3 col-md-6">
+            @using (Html.BeginForm())
+            {
+                <div class="form-group row">
+                    <label for="code" class="col-sm-5" style="padding-top:10px">Code</label>
+                    <div class="col-sm-7">
+                        @{
+                            int code = InstanceResolver.Instance.Famille.GetAll().Count() == 0 ? 1 : InstanceResolver.Instance.Famille.GetAll().Last().CodeFamille + 1;
+                        }
+                        <input type="text" class="form-control" disabled id="code" name="code" value="@code">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="designation" class="col-sm-5" style="padding-top:10px">Designation</label>
+                    <div class="col-sm-7">
+                        <input type="text" class="form-control" id="designation" name="designation" placeholder="designation">
+                    </div>
+                </div>
+                
+                <div class="form-group row">
+                    <div class="col-sm-offset-5 col-sm-7">
+                        <button type="submit" class="btn btn-success">Ajouter</button>
+                    </div>
+                </div>
+                            }
+        </div>
+    </div>
+
+</div>

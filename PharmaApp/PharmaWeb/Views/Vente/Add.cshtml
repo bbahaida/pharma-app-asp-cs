@@ -1,0 +1,69 @@
+﻿
+@{
+    ViewBag.Title = "Vente Ajouter";
+    if (ViewBag.error)
+    {
+        <script type="text/javascript">
+            var m = "@ViewBag.message";
+            alert("Erreur l'operation a echoue " + m);
+        </script>
+    }
+}
+<div class="container">
+    <div class="row">
+        <div class="col-md-offset-3 col-md-6">
+            @using (Html.BeginForm())
+            {
+                <div class="form-group row">
+                    <label for="code" class="col-sm-5" style="padding-top:10px">Code</label>
+                    <div class="col-sm-7">
+                        @{
+                            int code = InstanceResolver.Instance.Vente.GetAll().Count() == 0 ? 1 : InstanceResolver.Instance.Vente.GetAll().Last().NumVente + 1;
+                        }
+                        <input type="text" class="form-control" disabled id="code" name="code" value="@code">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="medicament" class="col-sm-5" style="padding-top:10px">Medicament</label>
+                    <div class="col-sm-7">
+                        @{ List<PharmaDomain.Medicament> data = InstanceResolver.Instance.Medicament.GetAll().ToList();}
+                        <select class="form-control" id="medicament" name="medicament">
+                            @{ 
+                                foreach(PharmaDomain.Medicament m in data)
+                                {
+                                    <option value="@m.CodeMedicament">@m.LibelleMedicament</option>
+                                }
+                            }
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="stock" class="col-sm-5" style="padding-top:10px">Stock</label>
+                    <div class="col-sm-7">
+                        @{ List<PharmaDomain.Stock> dataStock = InstanceResolver.Instance.Stock.GetAll().ToList();}
+                        <select class="form-control" id="stock" name="stock">
+                            @{
+                                foreach (PharmaDomain.Stock m in dataStock)
+                                {
+                                    <option value="@m.NumStock">@m.NumStock</option>
+                                }
+                            }
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="quantite" class="col-sm-5" style="padding-top:10px">Quantité</label>
+                    <div class="col-sm-7">
+                        <input type="text" class="form-control" id="quantite" name="quantite" placeholder="Quantité">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <div class="col-sm-offset-5 col-sm-7">
+                        <button type="submit" class="btn btn-success">Ajouter</button>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+
+</div>

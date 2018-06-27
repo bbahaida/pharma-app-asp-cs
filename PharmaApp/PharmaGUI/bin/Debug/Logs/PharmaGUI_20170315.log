@@ -1,0 +1,10 @@
+2017-03-15 00:35:10,775 [INFO] [PharmaDomain.Service.VenteServiceImpl] - [AddVente] - [26]: admin a ajouter le Stock {9,21000,0000}
+2017-03-15 00:35:11,691 [INFO] [PharmaDomain.Service.VenteMediServiceImpl] - [AddVenteMedi] - [42]: admin a ajouter le medicament Nifedipine 10 mg B/1000 cp dans le stock 9
+2017-03-15 01:36:53,760 [INFO] [PharmaDomain.Service.VenteServiceImpl] - [AddVente] - [26]: admin a ajouter le Stock {10,12600,0000}
+2017-03-15 01:36:54,688 [INFO] [PharmaDomain.Service.VenteMediServiceImpl] - [AddVenteMedi] - [42]: admin a ajouter le medicament Nifedipine 10 mg B/1000 cp dans le stock 10
+2017-03-15 01:38:54,443 [INFO] [PharmaDomain.Service.VenteServiceImpl] - [AddVente] - [26]: admin a ajouter le Stock {11,4200,0000}
+2017-03-15 01:38:55,222 [INFO] [PharmaDomain.Service.VenteMediServiceImpl] - [AddVenteMedi] - [42]: admin a ajouter le medicament Tetracaine HCL 0.5% coll unité dans le stock 11
+2017-03-15 11:35:30,651 [INFO] [PharmaDomain.Service.VenteServiceImpl] - [AddVente] - [26]: mouin a ajouter le Stock {12,4200,0000}
+2017-03-15 11:35:31,277 [INFO] [PharmaDomain.Service.VenteMediServiceImpl] - [AddVenteMedi] - [42]: mouin a ajouter le medicament Nifedipine 10 mg B/1000 cp dans le stock 12
+2017-03-15 13:57:07,425 [INFO] [PharmaDomain.Service.VenteServiceImpl] - [AddVente] - [26]: admin a ajouter le Stock {13,2100,0000}
+2017-03-15 13:57:08,180 [INFO] [PharmaDomain.Service.VenteMediServiceImpl] - [AddVenteMedi] - [42]: admin a ajouter le medicament Nifedipine 10 mg B/1000 cp dans le stock 13

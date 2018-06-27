@@ -1,0 +1,2 @@
+2017-03-07 00:27:08,338 [ERROR] [PharmaDomain.Dao.UserDaoImpl] - [GetOneByLogin] - [88]: La séquence ne contient aucun élément.
+2017-03-07 00:27:09,147 [INFO] [PharmaDomain.Service.UserServiceImpl] - [AddUser] - [27]: admin a ajouter l'utilisateur mouin

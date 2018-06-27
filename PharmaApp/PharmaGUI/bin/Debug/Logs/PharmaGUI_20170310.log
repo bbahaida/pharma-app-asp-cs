@@ -1,0 +1,6 @@
+2017-03-10 23:07:11,266 [INFO] [PharmaDomain.Service.StockServiceImpl] - [AddStock] - [26]: admin a ajouter le Stock 1
+2017-03-10 23:07:25,501 [INFO] [PharmaDomain.Service.StockServiceImpl] - [AddStock] - [26]: admin a ajouter le Stock 2
+2017-03-10 23:18:06,620 [ERROR] [PharmaDomain.Dao.FamilleDaoImpl] - [GetOneFamilleByDesignation] - [78]: La séquence ne contient aucun élément.
+2017-03-10 23:18:06,870 [INFO] [PharmaDomain.Service.FamilleServiceImpl] - [EditFamille] - [70]: admin a Modifier la famille Antiagrégants plaquettaires a Antiagrégants plaquettaires
+2017-03-10 23:21:26,224 [ERROR] [PharmaDomain.Dao.FamilleDaoImpl] - [GetOneFamilleByDesignation] - [78]: La séquence ne contient aucun élément.
+2017-03-10 23:21:26,506 [INFO] [PharmaDomain.Service.FamilleServiceImpl] - [EditFamille] - [70]: admin a Modifier la famille Antiarythmiques a Antiarythmiques

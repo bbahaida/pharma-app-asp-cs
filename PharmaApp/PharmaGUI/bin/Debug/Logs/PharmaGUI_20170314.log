@@ -1,0 +1,12 @@
+2017-03-14 15:26:27,163 [INFO] [PharmaDomain.Service.VenteServiceImpl] - [AddVente] - [26]: admin a ajouter le Stock {6,3000,0000}
+2017-03-14 15:26:27,911 [INFO] [PharmaDomain.Service.VenteMediServiceImpl] - [AddVenteMedi] - [38]: admin a ajouter le medicament Tetracaine HCL 0.5% coll unité dans le stock 6
+2017-03-14 15:32:51,618 [INFO] [PharmaDomain.Service.VenteServiceImpl] - [AddVente] - [26]: admin a ajouter le Stock {7,7500,0000}
+2017-03-14 15:32:52,527 [ERROR] [PharmaDomain.Dao.StockDaoImpl] - [EditStock] - [58]: An entity object cannot be referenced by multiple instances of IEntityChangeTracker.
+2017-03-14 15:32:52,849 [INFO] [PharmaDomain.Service.VenteMediServiceImpl] - [AddVenteMedi] - [42]: admin a ajouter le medicament Tetracaine HCL 0.5% coll unité dans le stock 7
+2017-03-14 16:02:47,570 [INFO] [PharmaDomain.Service.VenteServiceImpl] - [AddVente] - [26]: admin a ajouter le Stock {8,1500,0000}
+2017-03-14 16:02:48,559 [INFO] [PharmaDomain.Service.VenteMediServiceImpl] - [AddVenteMedi] - [42]: admin a ajouter le medicament Tetracaine HCL 0.5% coll unité dans le stock 8
+2017-03-14 16:43:32,605 [INFO] [PharmaDomain.Service.StockServiceImpl] - [DeleteStock] - [43]: admin a supprime le stock 2
+2017-03-14 16:43:36,646 [INFO] [PharmaDomain.Service.StockServiceImpl] - [AddStock] - [26]: admin a ajouter le Stock 3
+2017-03-14 21:51:12,604 [INFO] [PharmaDomain.Service.UserServiceImpl] - [AddUser] - [27]: admin a ajouter l'utilisateur mouin
+2017-03-14 22:28:29,915 [INFO] [PharmaDomain.Service.UserServiceImpl] - [EditUser] - [61]: admin a modifier l'utilisateur mouin
+2017-03-14 22:29:03,098 [INFO] [PharmaDomain.Service.UserServiceImpl] - [EditUser] - [61]: mouin a modifier l'utilisateur mouin

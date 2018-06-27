@@ -1,0 +1,65 @@
+﻿
+@{
+    ViewBag.Title = "Utilisateur Ajouter";
+    if (ViewBag.error)
+    {
+        <script type="text/javascript">
+
+            alert("Erreur l'operation a echoue");
+        </script>
+        if (ViewBag.permission)
+        {
+            Response.Redirect("~/User/Index");
+        }
+    }
+}
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-offset-3 col-md-6">
+            @using (Html.BeginForm())
+            {
+                <div class="form-group row">
+                    <label for="code" class="col-sm-5" style="padding-top:10px">Code</label>
+                    <div class="col-sm-7">
+                        @{
+                            int code = InstanceResolver.Instance.User.GetAll().Count() == 0 ? 1 : InstanceResolver.Instance.User.GetAll().Last().UserId + 1;
+                        }
+                        <input type="text" class="form-control" disabled id="code" name="code" value="@code">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="name" class="col-sm-5" style="padding-top:10px">Nom</label>
+                    <div class="col-sm-7">
+                        <input type="text" class="form-control" id="name" name="name" placeholder="Nom">
+                    </div>
+                </div>
+                
+                <div class="form-group row">
+                    <label for="login" class="col-sm-5" style="padding-top:10px">Login</label>
+                    <div class="col-sm-7">
+                        <input type="text" class="form-control" id="login" name="login" placeholder="Login">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="password" class="col-sm-5" style="padding-top:10px">Mot de passe</label>
+                    <div class="col-sm-7">
+                        <input type="password" class="form-control" id="password" name="password" placeholder="Pasword">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="confirm" class="col-sm-5" style="padding-top:10px">Confirmation</label>
+                    <div class="col-sm-7">
+                        <input type="password" class="form-control" id="confirm" name="confirm" placeholder="Confirmation">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <div class="col-sm-offset-5 col-sm-7">
+                        <button type="submit" class="btn btn-success">Ajouter</button>
+                    </div>
+                </div>
+                            }
+        </div>
+    </div>
+
+</div>

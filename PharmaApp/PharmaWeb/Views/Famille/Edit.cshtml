@@ -1,0 +1,40 @@
+﻿@model PharmaDomain.Famille
+@{
+    ViewBag.Title = "Famille Modifier";
+    if (ViewBag.error)
+    {
+        <script type="text/javascript">
+            alert("Erreur l'operation a echoue");
+        </script>
+    }
+}
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-offset-3 col-md-6">
+            @using (Html.BeginForm())
+            {
+                <div class="form-group row">
+                    <label for="code" class="col-sm-5" style="padding-top:10px">Code</label>
+                    <div class="col-sm-7">
+                        
+                        <input type="text" class="form-control" id="code" name="code" value="@Model.CodeFamille">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="designation" class="col-sm-5" style="padding-top:10px">Designation</label>
+                    <div class="col-sm-7">
+                        <input type="text" class="form-control" id="designation" name="designation" value="@Model.Designation" placeholder="designation">
+                    </div>
+                </div>
+
+                <div class="form-group row">
+                    <div class="col-sm-offset-5 col-sm-7">
+                        <button type="submit" class="btn btn-success">Modifier</button>
+                    </div>
+                </div>
+                            }
+        </div>
+    </div>
+
+</div>
