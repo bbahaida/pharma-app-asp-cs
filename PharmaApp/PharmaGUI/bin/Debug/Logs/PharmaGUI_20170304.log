@@ -1,6 +1,0 @@
-2017-03-04 00:32:52,560 [ERROR] [PharmaDomain.Dao.FamilleDaoImpl] - [GetOneFamilleByDesignation] - [78]: La séquence ne contient aucun élément.
-2017-03-04 00:32:53,159 [INFO] [PharmaDomain.Service.FamilleServiceImpl] - [AddFamille] - [32]: admin a ajouter la famille Test
-2017-03-04 10:25:34,634 [ERROR] [PharmaDomain.Dao.FamilleDaoImpl] - [GetOneFamilleByDesignation] - [78]: La séquence ne contient aucun élément.
-2017-03-04 10:25:34,973 [INFO] [PharmaDomain.Service.FamilleServiceImpl] - [AddFamille] - [32]: admin a ajouter la famille Anti-Code
-2017-03-04 15:22:45,169 [ERROR] [PharmaDomain.Dao.UserDoaImpl] - [GetUserByAuth] - [102]: La séquence ne contient aucun élément.
-2017-03-04 15:24:24,692 [ERROR] [PharmaDomain.Dao.UserDoaImpl] - [GetUserByAuth] - [102]: La séquence ne contient aucun élément.

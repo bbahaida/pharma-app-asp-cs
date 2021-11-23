@@ -1,3 +1,0 @@
-2017-03-13 11:09:15,013 [INFO] [PharmaDomain.Service.VenteServiceImpl] - [AddVente] - [26]: admin a ajouter le Stock {5,21000,0000}
-2017-03-13 11:09:16,112 [INFO] [PharmaDomain.Service.VenteMediServiceImpl] - [AddVenteMedi] - [34]: admin a ajouter le medicament Nifedipine 10 mg B/1000 cp dans le stock 5
-2017-03-13 18:02:06,666 [INFO] [PharmaDomain.Service.StockServiceImpl] - [AddStock] - [26]: admin a ajouter le Stock 2

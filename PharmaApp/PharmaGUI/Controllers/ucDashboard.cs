@@ -105,6 +105,7 @@ namespace PharmaGUI.Controllers
             LineSeries col = new LineSeries { Stroke = System.Windows.Media.Brushes.Green, DataLabels = true, Values = new ChartValues<int>(), LabelPoint = p => p.Y.ToString() };
             Axis ax = new Axis { Separator = new Separator { Step = 1, IsEnabled = false } };
             ax.Labels = new List<string>();
+            data = frmMain.Instance.Vente.GetMontantPerDate();
             foreach (var x in data)
             {
                 col.Values.Add((int)Math.Ceiling(x.Value));

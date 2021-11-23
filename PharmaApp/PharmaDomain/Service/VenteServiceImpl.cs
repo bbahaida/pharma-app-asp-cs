@@ -79,30 +79,7 @@ namespace PharmaDomain.Service
         }
         public Dictionary<string,decimal> GetMontantPerDate()
         {
-            decimal m = 0;
-            string date = "";
-            Dictionary<string, decimal> data = new Dictionary<string, decimal>();
-            List<Vente> vs = VenteDao.GetAll().ToList();
-            foreach (Vente v in vs)
-            {
-                
-                if ((!date.Equals("") && !date.Equals(v.DateVente.Date.ToShortDateString())) || (v.NumVente == vs.Last().NumVente))
-                {
-                    if (v.NumVente == vs.Last().NumVente)
-                    {
-                        date = v.DateVente.Date.ToShortDateString();
-                        m += v.MontantVente;
-                        data.Add(date, m);
-                        return data;
-                    }
-                    data.Add(date,m);
-                    m = 0;
-                    
-                }
-                date = v.DateVente.Date.ToShortDateString();
-                m += v.MontantVente;
-            }
-            return data;
+            return VenteDao.GetAll().GroupBy(v => v.DateVente.ToShortDateString()).ToDictionary(g => g.Key, g => g.Sum(v => v.MontantVente));
         }
     }
 }

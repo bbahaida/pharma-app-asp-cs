@@ -1,2 +1,0 @@
-2017-03-15 21:05:02,812 [INFO] [PharmaDomain.Service.VenteServiceImpl] - [AddVente] - [27]: admin a ajouter le Stock {15,2400,0000}
-2017-03-15 21:05:03,590 [INFO] [PharmaDomain.Service.VenteMediServiceImpl] - [AddVenteMedi] - [43]: admin a ajouter le medicament Aspirine 100mg B/1000 cp dans le stock 15

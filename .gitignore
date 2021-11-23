@@ -1,0 +1,8 @@
+﻿PharmaApp/.vs
+PharmaApp/PharmaGUI/bin
+PharmaApp/PharmaGUI/obj/Debug
+PharmaApp/PharmaWeb/bin
+PharmaApp/PharmaWeb/obj/Debug
+PharmaApp/PharmaDomain/bin
+PharmaApp/PharmaDomain/obj
+PharmaApp/PharmaWeb/logs

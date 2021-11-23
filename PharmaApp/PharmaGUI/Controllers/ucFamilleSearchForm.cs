@@ -70,7 +70,7 @@ namespace PharmaGUI.Controllers
             }
             else if (filterComboBox.Text.Equals("Designation"))
             {
-                List<Famille> data = frmMain.Instance.Famille.GetFamilleByMC(filterComboBox.Text).ToList();
+                List<Famille> data = frmMain.Instance.Famille.GetFamilleByMC(searchTextBox.Text).ToList();
 
                 familleGrid.Rows.Clear();
                 foreach (Famille f in data)
