@@ -6,3 +6,6 @@ PharmaApp/PharmaWeb/obj/Debug
 PharmaApp/PharmaDomain/bin
 PharmaApp/PharmaDomain/obj
 PharmaApp/PharmaWeb/logs
+.vs
+PharmaApp/PharmaGUI/obj
+PharmaApp/PharmaWeb/obj
